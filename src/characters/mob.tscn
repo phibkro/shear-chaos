@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4jf4ii8i2prd"]
+
+[ext_resource type="Script" path="res://src/characters/mob.gd" id="1_h8vjk"]
+[ext_resource type="SpriteFrames" uid="uid://da8kntokso7av" path="res://resources/sprite_frames/goblin_torch_red.tres" id="2_ucqx8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xf0ve"]
+
+[node name="Mob" type="RigidBody2D" groups=["mobs"]]
+collision_mask = 0
+gravity_scale = 0.0
+script = ExtResource("1_h8vjk")
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_ucqx8")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_xf0ve")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

@@ -7,13 +7,11 @@ A continuation of Godot's "first 2D game" tutorial.
 ## File structure
 
 - `root`
-	- `assets`
-		- Assets used in game
-	- `src`
-		- Main game logic/code
-		- Godot scenes and script files
-
-Raw assets and installed addons are not included within this repository.
+ 	- `assets`
+  		- Assets used in game
+ 	- `src`
+  		- Main game logic/code
+  		- Godot scenes and script files
 
 ## Resources
 

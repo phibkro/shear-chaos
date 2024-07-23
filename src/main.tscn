@@ -28,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_5bpf4")
 
-[node name="Ground" type="TileMap" parent="."]
+[node name="Grass" type="TileMap" parent="."]
 visible = false
 position = Vector2(16, 8)
 tile_set = ExtResource("5_52nv5")
@@ -38,13 +38,14 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 1, 131073,
 layer_1/name = "foreground"
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Player" parent="." instance=ExtResource("1_1ufet")]
+[node name="Player" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_1ufet")]
 position = Vector2(240, 450)
+sprite = NodePath("HappySheep")
 
 [node name="HappySheep" type="AnimatedSprite2D" parent="Player"]
 scale = Vector2(1.5, 1.5)
 sprite_frames = ExtResource("6_n0bua")
-animation = &"death"
+animation = &"idle"
 autoplay = "idle"
 
 [node name="MobTimer" type="Timer" parent="."]

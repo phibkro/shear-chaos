@@ -4,9 +4,6 @@ extends Node
 @export var sfx_game_over: AudioStreamPlayer
 var score: int
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
 
 func new_game():
 	# Reset

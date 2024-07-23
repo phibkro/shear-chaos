@@ -1,20 +1,30 @@
+@tool
 extends Area2D
 
 signal hit
-@export var sprite: AnimatedSprite2D
-@export var speed := 300
+
+@export var sprite: AnimatedSprite2D:
+	set(new_sprite):
+		sprite = new_sprite
+		update_configuration_warnings()
+@export_range(0, 1000) var speed: int = 300
 var isAlive = true
 
-var screen_size: Vector2
+@onready var screen_size: Vector2 = get_viewport_rect().size
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	screen_size = get_viewport_rect().size
+func _get_configuration_warnings():
+	if sprite == null:
+		return ["Assign a sprite"]
+	return []
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
+	if Engine.is_editor_hint():
+		return
+	
 	if not isAlive:
 		return
+	
 	var velocity = Vector2.ZERO
 	var isMoving = false
 	
@@ -42,7 +52,7 @@ func _process(delta):
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	isAlive = false
 	sprite.play("death")
 	$CollisionShape2D.set_deferred("disabled", true)

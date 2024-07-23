@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://rkf8u2a652nr"
-path="res://.godot/imported/Torch_Red.png-2e4de547251d9c8ec246c8c769cd3f04.ctex"
+uid="uid://dlri6rxgh0j45"
+path="res://.godot/imported/HappySheep_Bouncing.png-871cf97d1fa12fa6292b0225ae3dbc90.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/art/Torch_Red.png"
-dest_files=["res://.godot/imported/Torch_Red.png-2e4de547251d9c8ec246c8c769cd3f04.ctex"]
+source_file="res://assets/Troops/Sheep/HappySheep_Bouncing.png"
+dest_files=["res://.godot/imported/HappySheep_Bouncing.png-871cf97d1fa12fa6292b0225ae3dbc90.ctex"]
 
 [params]
 

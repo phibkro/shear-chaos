@@ -6,8 +6,8 @@ generously provided by [Pixel Frog](https://pixelfrog-assets.itch.io/)
 ## File structure
 
 - `root`
-	- `resources`
-		- Processed assets used in game
+	- `assets`
+		- Assets used in game
 	- `src`
 		- Main game logic/code
 		- Godot scenes and script files

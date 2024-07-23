@@ -4,6 +4,6 @@
 *.translation
 export_presets.cfg
 
-assets/
 addons/
-exports/
+_assets/
+_exports/

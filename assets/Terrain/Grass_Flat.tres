@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://qf2hqmh4hx0b"]
 
-[ext_resource type="Texture2D" uid="uid://7ptqyoh2aap3" path="res://assets/Terrain/Ground/Tilemap_Flat.png" id="1_d0ftw"]
+[ext_resource type="Texture2D" uid="uid://7ptqyoh2aap3" path="res://assets/Terrain/Grass_Flat.png" id="1_724mc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dehxg"]
 resource_name = "ground"
-texture = ExtResource("1_d0ftw")
+texture = ExtResource("1_724mc")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -125,6 +125,6 @@ texture_region_size = Vector2i(64, 64)
 tile_size = Vector2i(64, 64)
 uv_clipping = true
 terrain_set_0/mode = 0
-terrain_set_0/terrain_0/name = "ground"
+terrain_set_0/terrain_0/name = "Grass_Flat"
 terrain_set_0/terrain_0/color = Color(0.5, 0.34375, 0.25, 1)
 sources/1 = SubResource("TileSetAtlasSource_dehxg")

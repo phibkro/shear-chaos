@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8jv2a8pb5lbc"
-path="res://.godot/imported/Water.png-77341aee95852c34d22010b4f323493c.ctex"
+uid="uid://rkf8u2a652nr"
+path="res://.godot/imported/Torch_Red.png-8c04ca21fa98964611005e17a201f170.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/art/Water.png"
-dest_files=["res://.godot/imported/Water.png-77341aee95852c34d22010b4f323493c.ctex"]
+source_file="res://assets/Troops/Goblins/Torch_Red.png"
+dest_files=["res://.godot/imported/Torch_Red.png-8c04ca21fa98964611005e17a201f170.ctex"]
 
 [params]
 

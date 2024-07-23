@@ -3,11 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://dpo75j7ra04cm" path="res://src/characters/player.tscn" id="1_1ufet"]
 [ext_resource type="Script" path="res://src/main.gd" id="1_180hn"]
 [ext_resource type="PackedScene" uid="uid://b4jf4ii8i2prd" path="res://src/characters/mob.tscn" id="2_dncjg"]
-[ext_resource type="Texture2D" uid="uid://8jv2a8pb5lbc" path="res://resources/art/Water.png" id="3_5bpf4"]
+[ext_resource type="Texture2D" uid="uid://8jv2a8pb5lbc" path="res://assets/Terrain/Water.png" id="3_5bpf4"]
 [ext_resource type="PackedScene" uid="uid://n4ny5ub0c0bg" path="res://src/hud.tscn" id="4_2dwxb"]
-[ext_resource type="TileSet" uid="uid://qf2hqmh4hx0b" path="res://resources/tilesets/ground.tres" id="5_52nv5"]
-[ext_resource type="SpriteFrames" uid="uid://cxn20r5ped3i5" path="res://resources/sprite_frames/sheep.tres" id="6_n0bua"]
-[ext_resource type="AudioStream" uid="uid://03udbys7cv0p" path="res://resources/sfx/Explosion.wav" id="7_uckn2"]
+[ext_resource type="TileSet" uid="uid://qf2hqmh4hx0b" path="res://assets/Terrain/Grass_Flat.tres" id="5_52nv5"]
+[ext_resource type="SpriteFrames" uid="uid://cxn20r5ped3i5" path="res://assets/Troops/Sheep/HappySheep.tres" id="6_n0bua"]
+[ext_resource type="AudioStream" uid="uid://03udbys7cv0p" path="res://assets/Explosion.wav" id="7_uckn2"]
 
 [sub_resource type="Curve2D" id="Curve2D_4qfgg"]
 _data = {
@@ -20,7 +20,7 @@ script = ExtResource("1_180hn")
 mob_scene = ExtResource("2_dncjg")
 sfx_game_over = NodePath("Death")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BGColor" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -28,7 +28,7 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_5bpf4")
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="Ground" type="TileMap" parent="."]
 visible = false
 position = Vector2(16, 8)
 tile_set = ExtResource("5_52nv5")
@@ -45,13 +45,14 @@ sprite = NodePath("HappySheep")
 [node name="HappySheep" type="AnimatedSprite2D" parent="Player"]
 scale = Vector2(1.5, 1.5)
 sprite_frames = ExtResource("6_n0bua")
-animation = &"idle"
+animation = &"death"
 autoplay = "idle"
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5
 
 [node name="ScoreTimer" type="Timer" parent="."]
+wait_time = 0.1
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://doepfv3j42n1u"
-path="res://.godot/imported/Warrior_Blue.png-f07c955b01f898c0cc7b584d95028daf.ctex"
+uid="uid://8jv2a8pb5lbc"
+path="res://.godot/imported/Water.png-f0d5b458582ac23125b85649722a9ac7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://resources/art/Warrior_Blue.png"
-dest_files=["res://.godot/imported/Warrior_Blue.png-f07c955b01f898c0cc7b584d95028daf.ctex"]
+source_file="res://assets/Terrain/Water.png"
+dest_files=["res://.godot/imported/Water.png-f0d5b458582ac23125b85649722a9ac7.ctex"]
 
 [params]
 

@@ -15,8 +15,9 @@ _data = {
 }
 point_count = 5
 
-[node name="Main" type="Node" node_paths=PackedStringArray("sfx_game_over")]
+[node name="Main" type="Node" node_paths=PackedStringArray("player", "sfx_game_over")]
 script = ExtResource("1_180hn")
+player = NodePath("Player")
 mob_scene = ExtResource("2_dncjg")
 sfx_game_over = NodePath("Death")
 

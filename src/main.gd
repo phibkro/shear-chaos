@@ -1,9 +1,29 @@
+@tool
 extends Node
 
-@export var mob_scene: PackedScene
-@export var sfx_game_over: AudioStreamPlayer
+@export var player: Player:
+	set(v):
+		player = v
+		update_configuration_warnings()
+@export var mob_scene: PackedScene:
+	set(v):
+		mob_scene = v
+		update_configuration_warnings()
+@export var sfx_game_over: AudioStreamPlayer:
+	set(v):
+		sfx_game_over = v
+		update_configuration_warnings()
 var score: int
 
+func _get_configuration_warnings():
+	var warnings = []
+	if not player:
+		warnings.append("Assign missing Player")
+	if not mob_scene:
+		warnings.append("Assign missing mob scene")
+	if not sfx_game_over:
+		warnings.append("Assign missing game over sound")
+	return warnings
 
 func new_game():
 	# Reset

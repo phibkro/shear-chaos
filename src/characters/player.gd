@@ -1,4 +1,5 @@
 @tool
+class_name Player
 extends Area2D
 
 signal hit
@@ -13,7 +14,7 @@ var isAlive = true
 @onready var screen_size: Vector2 = get_viewport_rect().size
 
 func _get_configuration_warnings():
-	if sprite == null:
+	if not sprite:
 		return ["Assign a sprite"]
 	return []
 

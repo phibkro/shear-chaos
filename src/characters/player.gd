@@ -3,7 +3,7 @@ extends Area2D
 signal hit
 @export var sprite: AnimatedSprite2D
 @export var speed := 300
-
+var isAlive = true
 
 var screen_size: Vector2
 
@@ -13,7 +13,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if not isAlive:
+		return
+	
 	var velocity = Vector2.ZERO
+	
 	if Input.is_action_pressed("move_right"):
 		velocity.x += 1
 		sprite.flip_h = false
@@ -24,7 +28,7 @@ func _process(delta):
 		velocity.y += 1
 	if Input.is_action_pressed("move_up"):
 		velocity.y -= 1
-
+	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		sprite.play("walk")
@@ -34,14 +38,13 @@ func _process(delta):
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
 
-
 func _on_body_entered(body):
-	hide()
+	isAlive = false
+	sprite.play("death")
 	hit.emit()
-	
 	$CollisionShape2D.set_deferred("disabled", true)
 
 func start(pos):
+	isAlive = true
 	position = pos
-	show()
 	$CollisionShape2D.disabled = false

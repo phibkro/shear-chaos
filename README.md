@@ -16,10 +16,20 @@ Raw assets and installed addons are not included within this repository.
 
 ## Resources
 
-Tutorial: 
-- [Your first 2D game - Godot](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
+- Tutorial: [Your first 2D game - Godot](https://docs.godotengine.org/en/stable/getting_started/first_2d_game/index.html)
 
-Assets: 
-- [Tiny Swords Assetpack - Itch.io](https://pixelfrog-assets.itch.io/tiny-swords)
-- [Silver Font - Itch.io](https://poppyworks.itch.io/silver)
-- [Sound Effects - Itch.io](https://jdwasabi.itch.io/8-bit-16-bit-sound-effects-pack)
+- Visual assets: [Tiny Swords - Itch.io](https://pixelfrog-assets.itch.io/tiny-swords)
+- Font: [Silver Font - Itch.io](https://poppyworks.itch.io/silver)
+- SFX (Sound Effects) [Sound Effects - Itch.io](https://jdwasabi.itch.io/8-bit-16-bit-sound-effects-pack)'
+- Background Music: [Box Jump by Abstraction - Itch.io](https://tallbeard.itch.io/three-red-hearts-prepare-to-dev)
+
+## Credit
+
+Huge thanks to the lovely people sharing and letting me use their work!
+
+Show them some love by checking them out:
+
+- Art: [Pixel Frog](https://pixelfrog-assets.itch.io/)
+- Font: [Poppy Works](https://poppy.works/)
+- Sound effects: [JDWasabi](https://www.jdwasabi.com/)
+- Music: [Abstraction](https://abstractionmusic.com/)

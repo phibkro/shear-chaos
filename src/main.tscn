@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://t6k0gfwo2y5b"]
+[gd_scene load_steps=11 format=3 uid="uid://t6k0gfwo2y5b"]
 
 [ext_resource type="PackedScene" uid="uid://dpo75j7ra04cm" path="res://src/characters/player.tscn" id="1_1ufet"]
 [ext_resource type="Script" path="res://src/main.gd" id="1_180hn"]
@@ -7,7 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://n4ny5ub0c0bg" path="res://src/hud.tscn" id="4_2dwxb"]
 [ext_resource type="TileSet" uid="uid://qf2hqmh4hx0b" path="res://assets/terrain/grass_flat.tres" id="5_52nv5"]
 [ext_resource type="SpriteFrames" uid="uid://cxn20r5ped3i5" path="res://assets/troops/sheep/sheep.tres" id="6_n0bua"]
-[ext_resource type="AudioStream" uid="uid://03udbys7cv0p" path="res://assets/explosion.wav" id="7_uckn2"]
+[ext_resource type="AudioStream" uid="uid://03udbys7cv0p" path="res://assets/sfx/explosion.wav" id="7_uckn2"]
+[ext_resource type="AudioStream" uid="uid://r5qlf4177kcm" path="res://assets/Three Red Hearts - Box Jump.ogg" id="9_37vov"]
 
 [sub_resource type="Curve2D" id="Curve2D_4qfgg"]
 _data = {
@@ -15,11 +16,12 @@ _data = {
 }
 point_count = 5
 
-[node name="Main" type="Node" node_paths=PackedStringArray("player", "sfx_game_over")]
+[node name="Main" type="Node" node_paths=PackedStringArray("player", "sfx_game_over", "background_music")]
 script = ExtResource("1_180hn")
 player = NodePath("Player")
 mob_scene = ExtResource("2_dncjg")
 sfx_game_over = NodePath("Death")
+background_music = NodePath("BGMusic")
 
 [node name="BGColor" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -72,6 +74,10 @@ curve = SubResource("Curve2D_4qfgg")
 [node name="Death" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_uckn2")
 volume_db = -15.022
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_37vov")
+volume_db = -30.77
 
 [connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]

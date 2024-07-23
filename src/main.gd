@@ -13,6 +13,10 @@ extends Node
 	set(v):
 		sfx_game_over = v
 		update_configuration_warnings()
+@export var background_music: AudioStreamPlayer:
+	set(v):
+		background_music = v
+		update_configuration_warnings()
 var score: int
 
 func _get_configuration_warnings():
@@ -28,9 +32,10 @@ func _get_configuration_warnings():
 func new_game():
 	# Reset
 	score = 0
-	$Player.start($StartPosition.position)
+	player.start($StartPosition.position)
 	get_tree().call_group("mobs", "queue_free")
 	$StartTimer.start()
+	background_music.play()
 	
 	# Update hud
 	$HUD.update_score(score)
@@ -64,6 +69,7 @@ func _on_mob_timer_timeout():
 	add_child(mob)
 
 func game_over():
+	background_music.stop()
 	sfx_game_over.play()
 	$ScoreTimer.stop()
 	$MobTimer.stop()

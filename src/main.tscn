@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dpo75j7ra04cm" path="res://src/characters/player.tscn" id="1_1ufet"]
 [ext_resource type="Script" path="res://src/main.gd" id="1_180hn"]
 [ext_resource type="PackedScene" uid="uid://b4jf4ii8i2prd" path="res://src/characters/mob.tscn" id="2_dncjg"]
-[ext_resource type="Texture2D" uid="uid://8jv2a8pb5lbc" path="res://assets/Terrain/Water/Water.png" id="3_5bpf4"]
+[ext_resource type="Texture2D" uid="uid://8jv2a8pb5lbc" path="res://resources/art/Water.png" id="3_5bpf4"]
 [ext_resource type="PackedScene" uid="uid://n4ny5ub0c0bg" path="res://src/hud.tscn" id="4_2dwxb"]
 [ext_resource type="TileSet" uid="uid://qf2hqmh4hx0b" path="res://resources/tilesets/ground.tres" id="5_52nv5"]
 [ext_resource type="SpriteFrames" uid="uid://cxn20r5ped3i5" path="res://resources/sprite_frames/sheep.tres" id="6_n0bua"]

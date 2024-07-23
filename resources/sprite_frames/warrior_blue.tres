@@ -1,7 +1,7 @@
 [gd_resource type="SpriteFrames" load_steps=29 format=3 uid="uid://ddnkn8hm4epop"]
 
 [ext_resource type="Texture2D" uid="uid://dqjlno771oqvu" path="res://assets/Factions/Knights/Troops/Dead/Dead.png" id="1_lguhc"]
-[ext_resource type="Texture2D" uid="uid://doepfv3j42n1u" path="res://assets/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="2_5dugl"]
+[ext_resource type="Texture2D" uid="uid://doepfv3j42n1u" path="res://resources/art/Warrior_Blue.png" id="2_5dugl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yjpx0"]
 atlas = ExtResource("1_lguhc")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b87bm74emkf1v"
-path="res://.godot/imported/HappySheep_All.png-d271a97324e2ab5aa851afb84755171e.ctex"
+uid="uid://b6wodvoshiyxk"
+path="res://.godot/imported/sheep_idle.png-03aa0b634afb2edc7d8a8ac397be7328.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Troops/Sheep/HappySheep_All.png"
-dest_files=["res://.godot/imported/HappySheep_All.png-d271a97324e2ab5aa851afb84755171e.ctex"]
+source_file="res://assets/troops/sheep/sheep_idle.png"
+dest_files=["res://.godot/imported/sheep_idle.png-03aa0b634afb2edc7d8a8ac397be7328.ctex"]
 
 [params]
 

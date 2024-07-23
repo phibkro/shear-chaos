@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4jf4ii8i2prd"]
 
 [ext_resource type="Script" path="res://src/characters/mob.gd" id="1_h8vjk"]
-[ext_resource type="SpriteFrames" uid="uid://da8kntokso7av" path="res://assets/Troops/Goblins/Torch_Red.tres" id="2_d2p4c"]
+[ext_resource type="SpriteFrames" uid="uid://da8kntokso7av" path="res://assets/troops/goblins/torch_red.tres" id="2_4hr42"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xf0ve"]
 
@@ -12,7 +12,7 @@ script = ExtResource("1_h8vjk")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = ExtResource("2_d2p4c")
+sprite_frames = ExtResource("2_4hr42")
 animation = &"idle"
 autoplay = "idle"
 

@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://n4ny5ub0c0bg"]
 
-[ext_resource type="FontFile" uid="uid://d36ycqtk4abh6" path="res://assets/Silver.ttf" id="1_2dp2q"]
+[ext_resource type="FontFile" uid="uid://d36ycqtk4abh6" path="res://assets/silver.ttf" id="1_2dp2q"]
 [ext_resource type="Script" path="res://src/hud.gd" id="1_8fgn7"]
-[ext_resource type="AudioStream" uid="uid://c86lhi4x3wuyb" path="res://assets/Confirm 1.wav" id="3_je42j"]
+[ext_resource type="AudioStream" uid="uid://c86lhi4x3wuyb" path="res://assets/confirm.wav" id="3_je42j"]
 
 [sub_resource type="InputEventAction" id="InputEventAction_l2p0l"]
 action = &"start_game"

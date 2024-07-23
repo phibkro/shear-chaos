@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dlri6rxgh0j45"
-path="res://.godot/imported/HappySheep_Bouncing.png-871cf97d1fa12fa6292b0225ae3dbc90.ctex"
+path="res://.godot/imported/sheep_bouncing.png-b1af0b62d301988cf7d2d6e5d7926561.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Troops/Sheep/HappySheep_Bouncing.png"
-dest_files=["res://.godot/imported/HappySheep_Bouncing.png-871cf97d1fa12fa6292b0225ae3dbc90.ctex"]
+source_file="res://assets/troops/sheep/sheep_bouncing.png"
+dest_files=["res://.godot/imported/sheep_bouncing.png-b1af0b62d301988cf7d2d6e5d7926561.ctex"]
 
 [params]
 

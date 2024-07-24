@@ -1,7 +1,8 @@
-# Dodge the creeps!
+# Shear Chaos
 
-Godot's "first 2d game" tutorial created by nori with assets 
-generously provided by [Pixel Frog](https://pixelfrog-assets.itch.io/)
+Survive as a sheep caught in the crosshairs of a fierce battle!
+
+A continuation of Godot's "first 2D game" tutorial.
 
 ## File structure
 

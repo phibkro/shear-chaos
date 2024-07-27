@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://t6k0gfwo2y5b"]
+[gd_scene load_steps=12 format=3 uid="uid://t6k0gfwo2y5b"]
 
 [ext_resource type="PackedScene" uid="uid://dpo75j7ra04cm" path="res://src/characters/player.tscn" id="1_1ufet"]
 [ext_resource type="Script" path="res://src/main.gd" id="1_180hn"]
@@ -8,6 +8,7 @@
 [ext_resource type="TileSet" uid="uid://qf2hqmh4hx0b" path="res://assets/terrain/grass_flat.tres" id="5_52nv5"]
 [ext_resource type="SpriteFrames" uid="uid://cxn20r5ped3i5" path="res://assets/troops/sheep/sheep.tres" id="6_n0bua"]
 [ext_resource type="AudioStream" uid="uid://03udbys7cv0p" path="res://assets/sfx/explosion.wav" id="7_uckn2"]
+[ext_resource type="SpriteFrames" uid="uid://c01qsjvb8yoj3" path="res://assets/items/meat.tres" id="7_vvseb"]
 [ext_resource type="AudioStream" uid="uid://r5qlf4177kcm" path="res://assets/Three Red Hearts - Box Jump.ogg" id="9_37vov"]
 
 [sub_resource type="Curve2D" id="Curve2D_4qfgg"]
@@ -41,15 +42,19 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 1, 131073,
 layer_1/name = "foreground"
 layer_1/tile_data = PackedInt32Array()
 
-[node name="Player" parent="." node_paths=PackedStringArray("sprite") instance=ExtResource("1_1ufet")]
+[node name="Player" parent="." node_paths=PackedStringArray("sprite", "death_sprite") instance=ExtResource("1_1ufet")]
 position = Vector2(240, 450)
 sprite = NodePath("HappySheep")
+death_sprite = NodePath("Meat")
 
 [node name="HappySheep" type="AnimatedSprite2D" parent="Player"]
 scale = Vector2(1.5, 1.5)
 sprite_frames = ExtResource("6_n0bua")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="Meat" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = ExtResource("7_vvseb")
 
 [node name="MobTimer" type="Timer" parent="."]
 wait_time = 0.5

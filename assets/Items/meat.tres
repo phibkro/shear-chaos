@@ -1,0 +1,60 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://c01qsjvb8yoj3"]
+
+[ext_resource type="Texture2D" uid="uid://dvok134c5dydc" path="res://assets/items/meat_spawn.png" id="1_c271j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sbji"]
+atlas = ExtResource("1_c271j")
+region = Rect2(0, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w45t1"]
+atlas = ExtResource("1_c271j")
+region = Rect2(128, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxwl3"]
+atlas = ExtResource("1_c271j")
+region = Rect2(256, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_15k7k"]
+atlas = ExtResource("1_c271j")
+region = Rect2(384, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyhiq"]
+atlas = ExtResource("1_c271j")
+region = Rect2(512, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw2mc"]
+atlas = ExtResource("1_c271j")
+region = Rect2(640, 0, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5q3s"]
+atlas = ExtResource("1_c271j")
+region = Rect2(768, 0, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sbji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w45t1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxwl3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_15k7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nyhiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw2mc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5q3s")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]

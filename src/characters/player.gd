@@ -8,6 +8,7 @@ signal hit
 	set(new_sprite):
 		sprite = new_sprite
 		update_configuration_warnings()
+@export var death_sprite: AnimatedSprite2D
 @export_range(0, 1000) var speed: int = 300
 var isAlive = true
 
@@ -17,6 +18,11 @@ func _get_configuration_warnings():
 	if not sprite:
 		return ["Assign a sprite"]
 	return []
+
+
+func _ready():
+	sprite.show()
+	death_sprite.hide()
 
 
 func _process(delta):
@@ -53,11 +59,15 @@ func _process(delta):
 	position += velocity * delta
 	position = position.clamp(Vector2.ZERO, screen_size)
 
+
 func _on_body_entered(_body):
 	isAlive = false
-	sprite.play("death")
+	sprite.hide()
+	death_sprite.show()
+	death_sprite.play("default")
 	$CollisionShape2D.set_deferred("disabled", true)
 	hit.emit()
+
 
 func start(pos):
 	isAlive = true

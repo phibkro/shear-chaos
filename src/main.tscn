@@ -24,6 +24,29 @@ mob_scene = ExtResource("2_dncjg")
 sfx_game_over = NodePath("Death")
 background_music = NodePath("BGMusic")
 
+[node name="Death" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_uckn2")
+volume_db = -16.253
+
+[node name="BGMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_37vov")
+volume_db = -17.847
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="ScoreTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource("Curve2D_4qfgg")
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+
 [node name="BGColor" type="TextureRect" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
@@ -42,6 +65,9 @@ layer_0/tile_data = PackedInt32Array(0, 1, 0, 65536, 1, 1, 131072, 1, 1, 131073,
 layer_1/name = "foreground"
 layer_1/tile_data = PackedInt32Array()
 
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(240, 450)
+
 [node name="Player" parent="." node_paths=PackedStringArray("sprite", "death_sprite") instance=ExtResource("1_1ufet")]
 position = Vector2(240, 450)
 sprite = NodePath("HappySheep")
@@ -56,36 +82,10 @@ autoplay = "idle"
 [node name="Meat" type="AnimatedSprite2D" parent="Player"]
 sprite_frames = ExtResource("7_vvseb")
 
-[node name="MobTimer" type="Timer" parent="."]
-wait_time = 0.5
-
-[node name="ScoreTimer" type="Timer" parent="."]
-wait_time = 0.1
-
-[node name="StartTimer" type="Timer" parent="."]
-wait_time = 2.0
-one_shot = true
-
-[node name="StartPosition" type="Marker2D" parent="."]
-position = Vector2(240, 450)
-
-[node name="MobPath" type="Path2D" parent="."]
-curve = SubResource("Curve2D_4qfgg")
-
-[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
-
 [node name="HUD" parent="." instance=ExtResource("4_2dwxb")]
 
-[node name="Death" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_uckn2")
-volume_db = -16.253
-
-[node name="BGMusic" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_37vov")
-volume_db = -17.847
-
-[connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="timeout" from="MobTimer" to="." method="_on_mob_timer_timeout"]
 [connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
 [connection signal="timeout" from="StartTimer" to="." method="_on_start_timer_timeout"]
+[connection signal="hit" from="Player" to="." method="game_over"]
 [connection signal="start_game" from="HUD" to="." method="new_game"]

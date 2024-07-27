@@ -1,6 +1,7 @@
 @tool
 extends Node
 
+@export_category("Mandatory")
 @export var player: Player:
 	set(v):
 		player = v
@@ -9,6 +10,7 @@ extends Node
 	set(v):
 		mob_scene = v
 		update_configuration_warnings()
+@export_category("Optional")
 @export var sfx_game_over: AudioStreamPlayer:
 	set(v):
 		sfx_game_over = v
@@ -17,7 +19,10 @@ extends Node
 	set(v):
 		background_music = v
 		update_configuration_warnings()
+
+
 var score: int
+
 
 func _get_configuration_warnings():
 	var warnings = []
@@ -28,6 +33,7 @@ func _get_configuration_warnings():
 	if not sfx_game_over:
 		warnings.append("Assign missing game over sound")
 	return warnings
+
 
 func new_game():
 	# Reset
@@ -41,14 +47,17 @@ func new_game():
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
 
+
 func _on_start_timer_timeout():
 	$MobTimer.start()
 	$ScoreTimer.start()
+
 
 func _on_score_timer_timeout():
 	score += 1
 	
 	$HUD.update_score(score)
+
 
 func _on_mob_timer_timeout():
 	var mob = mob_scene.instantiate()
@@ -68,6 +77,7 @@ func _on_mob_timer_timeout():
 	
 	add_child(mob)
 
+
 func game_over():
 	background_music.stop()
 	sfx_game_over.play()
@@ -75,3 +85,4 @@ func game_over():
 	$MobTimer.stop()
 	
 	$HUD.show_game_over()
+

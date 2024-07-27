@@ -28,7 +28,6 @@ func _ready():
 func _process(delta):
 	if Engine.is_editor_hint():
 		return
-	
 	if not isAlive:
 		return
 	
@@ -70,6 +69,8 @@ func _on_body_entered(_body):
 
 
 func start(pos):
+	sprite.show()
+	death_sprite.hide()
 	isAlive = true
 	position = pos
 	$CollisionShape2D.disabled = false
